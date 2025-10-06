@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sell Product</title>
+
+  <!-- Google font & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="title">Sell Product</h1>
+
+    <div class="profile-container">
+      <select id="profileSelect" class="profile-select">
+        <option value="default">Select Profile</option>
+        <option value="John Doe">John Doe</option>
+        <option value="Jane Smith">Jane Smith</option>
+        <option value="Michael">Michael</option>
+      </select>
+
+      <img id="profileImage"
+           class="profile-img"
+           src="https://via.placeholder.com/40"
+           alt="Profile"
+           title="Click to change profile image">
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Left: product list -->
+    <section class="panel product-section">
+      <div class="top-controls">
+        <input id="searchInput" type="text" placeholder="Search for product" class="search-input" />
+        <button id="addProductBtn" class="btn add-product-btn">
+          <span class="material-icons">add_circle</span>
+          Add product
+        </button>
+      </div>
+
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>SKU</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="productList"></tbody>
+      </table>
+    </section>
+
+    <!-- Right: sales cart -->
+    <aside class="panel cart-section">
+      <h3 class="cart-title">Sales Cart</h3>
+
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>SubTotal</th>
+          </tr>
+        </thead>
+        <tbody id="cartItems"></tbody>
+      </table>
+
+      <div class="cart-total">
+        <div class="total-label">Total</div>
+        <div class="total-value" id="cartTotal">0.00</div>
+      </div>
+
+      <button id="checkoutBtn" class="btn checkout-btn">
+        <span class="material-icons">shopping_cart_checkout</span>
+        Checkout
+      </button>
+
+      <button id="clearCartBtn" class="btn clear-btn">
+        Clear Cart
+      </button>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <button class="settings-btn" title="Settings">
+      <span class="material-icons">settings</span>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
